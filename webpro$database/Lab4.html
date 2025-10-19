@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab4</title>
+  <style>
+    /* lab4_1*/
+    button{
+      background-color: rgb(59, 34, 197); 
+      font-size: medium;
+      color:white;
+      padding: 20px;
+      margin: 15px;
+      border-radius: 10%;
+      transition: all 0.3s ease-in-out;
+    }
+    button:hover{
+      background-color: rgb(41, 166, 207);
+      color:rgb(0, 0, 0);
+      padding: 25px;
+      font-size: larger;
+    }
+
+    /* lab4_2*/
+    .lab4_2{
+      width: 350px;
+      height: 40px;
+      border: 4px dashed black;
+      margin: 15px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .box{
+      width: 25px;
+      height: 25px;
+      border-radius: 10%;
+      background-color: rgb(255, 0, 0);
+      position: absolute;
+      animation: moveBox 1.5s linear infinite alternate;
+    }
+    @keyframes moveBox{
+      0% { left: -25px; }
+      100% { left: 355px;}
+    }
+
+    /* lab4_3*/
+    .load{
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: white;
+      border: 5px solid rgb(209, 213, 219);
+      border-top: 5px solid rgb(60, 51, 234);
+      margin: 30px;
+      animation: spin 1.5s linear infinite;
+    }
+    @keyframes spin{
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
+    /* lab4_4 */
+    .lab4_4{
+      margin: 25px;
+      width: 150px;
+      height: 120px;
+      perspective: 10000000px;
+    }
+    .card{
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      border-radius: 8px;
+    }
+    .lab4_4:hover .card {
+      transform: rotateY(180deg);
+    }
+    .F, .B{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 8px;
+      font-size: 25px;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+    }
+    .F {
+      background-color: rgb(76, 177, 240);
+      color: white;
+    }
+    .B {
+      background-color: rgb(56, 55, 55);
+      color: white;
+      transform: rotateY(180deg);
+    }
+
+    /* lab4_5*/
+    .lab4_5{
+      position: relative;
+      overflow: hidden;
+      width: 200px;
+      margin: 25px;
+    }
+    .text{
+      position: absolute;
+      bottom: -100%;
+      width: 100%;
+      background: rgba(107, 33, 168, 0.7);
+      color: white;
+      padding: 15px;
+      transition: bottom 0.5s ease;
+    }
+    .lab4_5:hover .text{
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="lab4_1">
+    <button>Hover</button>
+  </div>
+
+  <div class="lab4_2">
+    <div class="box"></div>
+  </div>
+
+  <div class="lab4_3">
+    <div class="load"></div>
+  </div>
+
+  <div class="lab4_4">
+    <div class="card">
+      <div class="F">Front</div>
+      <div class="B">Back</div>
+    </div>
+  </div>
+
+  <div class="lab4_5">
+    <img src="https://upload.wikimedia.org/wikipedia/th/0/0d/Avengers_Endgame_poster.jpg" width="200" height="250">
+    <div class="text">Avenger Endgame</div>
+  </div>
+</body>
+</html>

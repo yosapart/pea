@@ -1,0 +1,50 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background: #fafafa;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+thead {
+    background: #f2f2f2;
+}
+th:nth-child(1),td:nth-child(1) {
+    text-align: left;
+}
+th, td {
+    border-bottom: 1px solid #f3f3f3;
+    /* border: 0.5px solid #ddd; */
+    padding: 10px;
+    text-align: center;
+}
+td.head {
+    /* display: flex; */
+    align-items: center;
+    gap: 8px;
+    padding: 5px 10px; /*ระยะห่างภายในแนวตั้ง 5px แนวนอน 10px*/
+    text-align: left;
+}
+td.head img{
+    width: 20px;
+    height: 20px;
+}
+tr {
+    background-color: white;
+    color: rgb(74, 74, 74);
+}
+tr:nth-child(even) {
+    background: #f9f9f9;
+}
+.win, .draw, .lose {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 2px;
+}
+.win { background: green;}
+.draw { background: gray; }
+.lose { background: red; }
+
